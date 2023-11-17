@@ -1,0 +1,7 @@
+<ItemGroup>
+  <ProjectReference Include="VendingMachine.cs" />
+  <ProjectReference Include="VendingMachineMenu.cs" />
+  <ProjectReference Include="Product.cs" />
+  <ProjectReference Include="CoinBox.cs" />
+  <ProjectReference Include="Coin.cs" />
+</ItemGroup>
