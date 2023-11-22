@@ -5,12 +5,16 @@ public class Product
 {
   private string description;
   private double price;
+  private int quantity;
 
-  public Product(string aDescription, double aPrice)
+  public Product(string aDescription, double aPrice, int aQuantity)
   {
     description = aDescription;
     price = aPrice;
+    quantity = aQuantity;
   }
+
+  public int Quantity { get; set; }
 
   public string getDescription()
   {
@@ -22,7 +26,6 @@ public class Product
     return price;
   }
 
-  //what does this do??
   public new bool Equals(object other)
   {
     if (other == null)
