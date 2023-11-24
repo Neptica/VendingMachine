@@ -44,9 +44,11 @@ public class VendingMachine
       Product prod = products[i];
       if (prod == p)
       {
-        if (prod.Quantity == 0) return string.Format("Out of Product {0}", prod.getDescription());
         double payment = currentCoins.getValue();
-        if (p.getPrice() <= payment)
+
+        if (prod.Quantity == 0) { return string.Format("Out of Product {0}", prod.getDescription()); } 
+        
+        else if (p.getPrice() <= payment)
         {
           products.RemoveAt(i);
           coins.addCoins(currentCoins);
