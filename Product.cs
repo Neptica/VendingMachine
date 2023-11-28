@@ -11,7 +11,7 @@ public class Product
   {
     description = aDescription;
     price = aPrice;
-    quantity = aQuantity;
+    Quantity = aQuantity;
   }
 
   public int Quantity { get; set; }

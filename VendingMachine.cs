@@ -50,7 +50,14 @@ public class VendingMachine
         
         else if (p.getPrice() <= payment)
         {
-          products.RemoveAt(i);
+          if (products[i].Quantity > 1)
+          {
+            products[i].Quantity--;   
+          }
+          else
+          {
+            products.RemoveAt(i);
+          }
           coins.addCoins(currentCoins);
           currentCoins.removeAllCoins();
           return "OK";
@@ -62,6 +69,11 @@ public class VendingMachine
       }
     }
     return "No such product";
+  }
+
+  public bool productsAvailable()
+  {
+    return products.Count > 0;
   }
 
   public double removeMoney()
